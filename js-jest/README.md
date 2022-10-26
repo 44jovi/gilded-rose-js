@@ -32,4 +32,4 @@ npm run test:coverage
 
 ## Design / Planning
 
-<!-- ![Screenshot](/design/design-diagram-0.png) -->
+![Screenshot](/design/design-diagram-0.png)
