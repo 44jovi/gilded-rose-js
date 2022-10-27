@@ -26,5 +26,18 @@ describe("Item", () => {
 
       expect(regularItem.sellIn).toEqual(9);
     });
+
+    it("updateQuality() updates item's quality value", () => {
+      regularItem = new RegularItem("Regular Item 2", 10, 50);
+
+      expect(regularItem.name).toEqual("Regular Item 2");
+      expect(regularItem.sellIn).toEqual(10);
+      expect(regularItem.quality).toEqual(50);
+
+      // Just decrease quality value by 1 until we add rules
+      regularItem.updateQuality();
+
+      expect(regularItem.quality).toEqual(49);
+    });
   });
 });

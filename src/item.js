@@ -12,6 +12,10 @@ class RegularItem extends Item {
   updateSellIn() {
     this.sellIn -= 1;
   }
+
+  updateQuality() {
+    this.quality -= 1;
+  }
 }
 
 // WIP: Refactor to export a list of classes
