@@ -28,6 +28,18 @@ describe("Item", () => {
       expect(regularItem.sellIn).toEqual(9);
     });
 
+    it("updateItemSellIn() cannot decrease an item's sell by date lower than zero", () => {
+      regularItem = new RegularItem("Regular Item 1", 0, 50);
+
+      expect(regularItem.name).toEqual("Regular Item 1");
+      expect(regularItem.sellIn).toEqual(0);
+      expect(regularItem.quality).toEqual(50);
+
+      regularItem.updateItemSellIn();
+
+      expect(regularItem.sellIn).toEqual(0);
+    });
+
     it("updateItemQuality() updates item's quality value correctly before sell by date ", () => {
       regularItem = new RegularItem("Regular Item 2", 10, 50);
 

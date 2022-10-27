@@ -12,7 +12,13 @@ class Item {
 // Regular Item - default rules for how its `sellIn` and `quality` updates
 class RegularItem extends Item {
   updateItemSellIn() {
-    this.sellIn -= 1;
+    // If sell by date is already zero
+    if (this.sellIn <= 0) {
+      this.sellIn = 0;
+      // Otherwise continue with decrement
+    } else {
+      this.sellIn -= 1;
+    }
   }
 
   updateItemQuality() {
