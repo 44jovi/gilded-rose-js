@@ -6,16 +6,19 @@ const RegularItem = require("../src/item");
 
 describe("Item", () => {
   describe("updateQuality()", () => {
-    it("updates a regular item's quality correctly before its sell by date", () => {
+    it("constructor takes array of Item objects", () => {
       mockRegularItem1 = new RegularItem("Regular Item 1", 10, 50);
+      mockRegularItem2 = new RegularItem("Regular Item 2", 5, 25);
 
-      console.log(mockRegularItem1);
-      expect(mockRegularItem1.name).toEqual("Regular Item 1");
-      expect(mockRegularItem1.sellIn).toEqual(10);
-      expect(mockRegularItem1.quality).toEqual(50);
-      items = shop = new Shop([mockRegularItem1]);
+      items = shop = new Shop([mockRegularItem1, mockRegularItem2]);
 
       expect(shop.updateQuality()[0].name).toEqual("Regular Item 1");
+      expect(shop.updateQuality()[0].sellIn).toEqual(10);
+      expect(shop.updateQuality()[0].quality).toEqual(50);
+
+      expect(shop.updateQuality()[1].name).toEqual("Regular Item 2");
+      expect(shop.updateQuality()[1].sellIn).toEqual(5);
+      expect(shop.updateQuality()[1].quality).toEqual(25);
     });
   });
 });
