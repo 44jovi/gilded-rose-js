@@ -1,5 +1,5 @@
 const Shop = require("../../src/shop");
-const RegularItem = require("../../src/item");
+const RegularItem = require("../../src/items/regular_item");
 
 // Future: use manual or Jest mocks for Item objects
 // Future: use beforeEach() to reduce code unnecessary code repetition
