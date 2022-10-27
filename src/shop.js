@@ -2,7 +2,7 @@ class Shop {
   constructor(items = []) {
     this.items = items;
   }
-  updateItemQuality() {
+  updateQuality() {
     return this.items;
   }
 }
