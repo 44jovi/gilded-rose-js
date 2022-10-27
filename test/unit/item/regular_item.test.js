@@ -33,7 +33,9 @@ describe("`RegularItem` - child class of `Item`", () => {
     expect(regularItem.quality).toEqual(50);
 
     regularItem.updateItemQuality();
+    regularItem.updateItemSellIn();
 
+    expect(regularItem.sellIn).toEqual(9);
     expect(regularItem.quality).toEqual(49);
   });
 
@@ -45,7 +47,9 @@ describe("`RegularItem` - child class of `Item`", () => {
     expect(regularItem.quality).toEqual(50);
 
     regularItem.updateItemQuality();
+    regularItem.updateItemSellIn();
 
+    expect(regularItem.sellIn).toEqual(0);
     expect(regularItem.quality).toEqual(48);
   });
 
@@ -57,10 +61,12 @@ describe("`RegularItem` - child class of `Item`", () => {
     expect(regularItem.quality).toEqual(0);
 
     regularItem.updateItemQuality();
+    regularItem.updateItemSellIn();
 
+    expect(regularItem.sellIn).toEqual(9);
     expect(regularItem.quality).toEqual(0);
   });
 
-  // Future: Add tests for maximum quality value (e.g. max. 50) if the RegularItem
-  // class ever needs to increase a regular item's quality in future
+  // Future: Add tests for maximum quality value if this
+  // class ever has conditions for increasing item quality
 });
