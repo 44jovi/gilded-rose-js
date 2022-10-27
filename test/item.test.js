@@ -1,8 +1,10 @@
 const Item = require("../src/item");
 const RegularItem = require("../src/item");
 
+// Future: Separate tests for child classes into different files
+
 describe("Item", () => {
-  describe("parent class", () => {
+  describe("parent class `Item`", () => {
     it("parent class object properties", () => {
       item = new Item("Rubber Duck", 99, 99);
 
@@ -12,11 +14,11 @@ describe("Item", () => {
     });
   });
 
-  describe("child classes", () => {
-    it("child class `RegularItem`", () => {
-      regularItem = new RegularItem("Some Regular Item", 10, 50);
+  describe("child class `RegularItem`", () => {
+    it("updateSellIn() updates item's sellIn value", () => {
+      regularItem = new RegularItem("Regular Item 1", 10, 50);
 
-      expect(regularItem.name).toEqual("Some Regular Item");
+      expect(regularItem.name).toEqual("Regular Item 1");
       expect(regularItem.sellIn).toEqual(10);
       expect(regularItem.quality).toEqual(50);
 

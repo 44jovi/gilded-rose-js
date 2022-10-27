@@ -10,7 +10,6 @@ class Item {
 // Future: Consider splitting child classes into separate files
 class RegularItem extends Item {
   updateSellIn() {
-    // WIP: Update this to decrement by amount specified in a instance variable
     this.sellIn -= 1;
   }
 }
