@@ -1,5 +1,5 @@
 const Shop = require("../../src/shop");
-const RegularItem = require("../../src/item");
+const RegularItem = require("../../src/items/regular_item");
 
 const items = [
   new RegularItem("Regular Item One", 100, 50),
