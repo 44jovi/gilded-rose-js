@@ -9,11 +9,11 @@ class Item {
 
 // Future: Consider splitting child classes into separate files
 class RegularItem extends Item {
-  updateSellIn() {
+  updateItemSellIn() {
     this.sellIn -= 1;
   }
 
-  updateQuality() {
+  updateItemQuality() {
     this.quality -= 1;
   }
 }

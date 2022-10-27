@@ -15,19 +15,19 @@ describe("Item", () => {
   });
 
   describe("child class `RegularItem`", () => {
-    it("updateSellIn() updates item's sellIn value", () => {
+    it("updateItemSellIn() updates item's sellIn value", () => {
       regularItem = new RegularItem("Regular Item 1", 10, 50);
 
       expect(regularItem.name).toEqual("Regular Item 1");
       expect(regularItem.sellIn).toEqual(10);
       expect(regularItem.quality).toEqual(50);
 
-      regularItem.updateSellIn();
+      regularItem.updateItemSellIn();
 
       expect(regularItem.sellIn).toEqual(9);
     });
 
-    it("updateQuality() updates item's quality value", () => {
+    it("updateItemQuality() updates item's quality value", () => {
       regularItem = new RegularItem("Regular Item 2", 10, 50);
 
       expect(regularItem.name).toEqual("Regular Item 2");
@@ -35,7 +35,7 @@ describe("Item", () => {
       expect(regularItem.quality).toEqual(50);
 
       // Just decrease quality value by 1 until we add rules
-      regularItem.updateQuality();
+      regularItem.updateItemQuality();
 
       expect(regularItem.quality).toEqual(49);
     });
