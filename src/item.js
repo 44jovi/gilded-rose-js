@@ -1,4 +1,4 @@
-// Do not alter this `Item` class
+// **Do not** alter this `Item` class
 class Item {
   constructor(name, sellIn, quality) {
     this.name = name;
@@ -8,6 +8,8 @@ class Item {
 }
 
 // Future: Consider splitting child classes into separate files
+
+// Regular Item - default rules for how its `sellIn` and `quality` updates
 class RegularItem extends Item {
   updateItemSellIn() {
     this.sellIn -= 1;
