@@ -3,6 +3,10 @@ class Shop {
     this.items = items;
   }
   updateQuality() {
+    this.items.forEach((item) => {
+      item.updateItemSellIn();
+      item.updateItemQuality();
+    });
     return this.items;
   }
 }

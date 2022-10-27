@@ -1,24 +1,26 @@
 const Shop = require("../src/shop");
 const RegularItem = require("../src/item");
+const { default: expect } = require("expect");
 
 // Future: use manual or Jest mocks for Item objects
 // Future: use beforeEach() to reduce code unnecessary code repetition
 
-describe("Item", () => {
+describe("Shop", () => {
   describe("updateQuality()", () => {
-    it("constructor takes array of Item objects", () => {
-      mockRegularItem1 = new RegularItem("Regular Item 1", 10, 50);
-      mockRegularItem2 = new RegularItem("Regular Item 2", 5, 25);
+    it("updates a regular item's quality correctly before its sell by date", () => {
+      regularItem1 = new RegularItem("Regular Item 1", 10, 50);
 
-      items = shop = new Shop([mockRegularItem1, mockRegularItem2]);
+      items = shop = new Shop([regularItem1]);
 
-      expect(shop.updateQuality()[0].name).toEqual("Regular Item 1");
-      expect(shop.updateQuality()[0].sellIn).toEqual(10);
-      expect(shop.updateQuality()[0].quality).toEqual(50);
+      expect(regularItem1.name).toEqual("Regular Item 1");
+      expect(regularItem1.sellIn).toEqual(10);
+      expect(regularItem1.quality).toEqual(50);
 
-      expect(shop.updateQuality()[1].name).toEqual("Regular Item 2");
-      expect(shop.updateQuality()[1].sellIn).toEqual(5);
-      expect(shop.updateQuality()[1].quality).toEqual(25);
+      result = shop.updateQuality();
+
+      expect(result[0].name).toEqual("Regular Item 1");
+      expect(result[0].sellIn).toEqual(9);
+      expect(result[0].quality).toEqual(49);
     });
   });
 });
