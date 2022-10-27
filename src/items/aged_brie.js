@@ -17,7 +17,7 @@ class AgedBrie extends Item {
 
     // If quality value is between 0 and 50 (inclusive)
     if (this.quality >= 0 && this.quality < 50) {
-      // If before sell by date
+      // And is before sell by date
       if (this.sellIn > 0) {
         // Quality value increases
         this.quality += 1;
