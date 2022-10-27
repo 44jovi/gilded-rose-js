@@ -1,7 +1,8 @@
+// Original file import, before separation of classes into different files
 // const { Shop, Item } = require("../src/shop");
 
-const Shop = require("../src/shop");
-const Item = require("../src/item");
+const Shop = require("../../../src/shop");
+const Item = require("../../../src/item");
 
 const items = [
   new Item("+5 Dexterity Vest", 10, 20),
