@@ -14,12 +14,15 @@ describe("Item", () => {
 
   describe("child classes", () => {
     it("child class `RegularItem`", () => {
-      regularItem = new RegularItem("Some Regular Item", 99, 50);
+      regularItem = new RegularItem("Some Regular Item", 10, 50);
 
       expect(regularItem.name).toEqual("Some Regular Item");
-      expect(regularItem.sellIn).toEqual(99);
+      expect(regularItem.sellIn).toEqual(10);
       expect(regularItem.quality).toEqual(50);
-      expect(regularItem.test()).toEqual("I am a Some Regular Item!");
+
+      regularItem.updateSellIn();
+
+      expect(regularItem.sellIn).toEqual(9);
     });
   });
 });
