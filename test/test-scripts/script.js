@@ -1,5 +1,4 @@
 const Shop = require("../../src/shop");
-const Item = require("../../src/item");
 const RegularItem = require("../../src/item");
 
 const items = [

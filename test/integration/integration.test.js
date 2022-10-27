@@ -7,51 +7,51 @@ const RegularItem = require("../../src/item");
 describe("Shop", () => {
   describe("updateQuality()", () => {
     it("updates a regular item's quality correctly before its sell by date", () => {
-      regularItem1 = new RegularItem("Regular Item 1", 10, 50);
+      const regularItem1 = new RegularItem("Regular Item 1", 10, 50);
 
-      items = shop = new Shop([regularItem1]);
+      const shop = new Shop([regularItem1]);
 
       expect(regularItem1.name).toEqual("Regular Item 1");
       expect(regularItem1.sellIn).toEqual(10);
       expect(regularItem1.quality).toEqual(50);
 
       // Shop inventory: Day 0
-      result = shop.updateQuality();
+      const result1 = shop.updateQuality();
 
-      expect(result[0].name).toEqual("Regular Item 1");
-      expect(result[0].sellIn).toEqual(9);
-      expect(result[0].quality).toEqual(49);
+      expect(result1[0].name).toEqual("Regular Item 1");
+      expect(result1[0].sellIn).toEqual(9);
+      expect(result1[0].quality).toEqual(49);
 
       // Shop inventory: Day 1
-      result = shop.updateQuality();
+      const result2 = shop.updateQuality();
 
-      expect(result[0].name).toEqual("Regular Item 1");
-      expect(result[0].sellIn).toEqual(8);
-      expect(result[0].quality).toEqual(48);
+      expect(result2[0].name).toEqual("Regular Item 1");
+      expect(result2[0].sellIn).toEqual(8);
+      expect(result2[0].quality).toEqual(48);
     });
   });
 
   it("updates a regular item's quality correctly after its sell by date", () => {
-    regularItem1 = new RegularItem("Regular Item 1", 0, 50);
+    const regularItem1 = new RegularItem("Regular Item 1", 0, 50);
 
-    items = shop = new Shop([regularItem1]);
+    const shop = new Shop([regularItem1]);
 
     expect(regularItem1.name).toEqual("Regular Item 1");
     expect(regularItem1.sellIn).toEqual(0);
     expect(regularItem1.quality).toEqual(50);
 
     // Shop inventory: Day 0
-    result = shop.updateQuality();
+    const result1 = shop.updateQuality();
 
-    expect(result[0].name).toEqual("Regular Item 1");
-    expect(result[0].sellIn).toEqual(0);
-    expect(result[0].quality).toEqual(48);
+    expect(result1[0].name).toEqual("Regular Item 1");
+    expect(result1[0].sellIn).toEqual(0);
+    expect(result1[0].quality).toEqual(48);
 
     // Shop inventory: Day 1
-    result = shop.updateQuality();
+    const result2 = shop.updateQuality();
 
-    expect(result[0].name).toEqual("Regular Item 1");
-    expect(result[0].sellIn).toEqual(0);
-    expect(result[0].quality).toEqual(46);
+    expect(result2[0].name).toEqual("Regular Item 1");
+    expect(result2[0].sellIn).toEqual(0);
+    expect(result2[0].quality).toEqual(46);
   });
 });
