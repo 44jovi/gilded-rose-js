@@ -4,8 +4,8 @@ class Shop {
   }
   updateQuality() {
     this.items.forEach((item) => {
-      item.updateItemSellIn();
       item.updateItemQuality();
+      item.updateItemSellIn();
     });
     return this.items;
   }
