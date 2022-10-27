@@ -2,6 +2,7 @@ const Item = require("../src/item");
 const RegularItem = require("../src/item");
 
 // Future: Separate tests for child classes into different files
+// Future: use beforeEach() to create Item child class instances where appropriate
 
 describe("Item", () => {
   describe("parent class `Item`", () => {
@@ -27,17 +28,40 @@ describe("Item", () => {
       expect(regularItem.sellIn).toEqual(9);
     });
 
-    it("updateItemQuality() updates item's quality value", () => {
+    it("updateItemQuality() updates item's quality value correctly before sell by date ", () => {
       regularItem = new RegularItem("Regular Item 2", 10, 50);
 
       expect(regularItem.name).toEqual("Regular Item 2");
       expect(regularItem.sellIn).toEqual(10);
       expect(regularItem.quality).toEqual(50);
 
-      // Just decrease quality value by 1 until we add rules
       regularItem.updateItemQuality();
 
       expect(regularItem.quality).toEqual(49);
+    });
+
+    it("updateItemQuality() updates item's quality value correctly after sell by date ", () => {
+      regularItem = new RegularItem("Regular Item 3", 0, 50);
+
+      expect(regularItem.name).toEqual("Regular Item 3");
+      expect(regularItem.sellIn).toEqual(0);
+      expect(regularItem.quality).toEqual(50);
+
+      regularItem.updateItemQuality();
+
+      expect(regularItem.quality).toEqual(48);
+    });
+
+    it("updateItemQuality() cannot decrease an item's quality lower than zero", () => {
+      regularItem = new RegularItem("Regular Item 4", 10, 0);
+
+      expect(regularItem.name).toEqual("Regular Item 4");
+      expect(regularItem.sellIn).toEqual(10);
+      expect(regularItem.quality).toEqual(0);
+
+      regularItem.updateItemQuality();
+
+      expect(regularItem.quality).toEqual(0);
     });
   });
 });

@@ -14,7 +14,16 @@ class RegularItem extends Item {
   }
 
   updateItemQuality() {
-    this.quality -= 1;
+    // If quality is already zero
+    if (this.quality <= 0) {
+      this.quality = 0;
+      // Before sell by date
+    } else if (this.sellIn > 0) {
+      this.quality -= 1;
+      // After sell by date
+    } else {
+      this.quality -= 2;
+    }
   }
 }
 
