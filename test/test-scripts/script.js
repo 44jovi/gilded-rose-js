@@ -1,9 +1,13 @@
 const Shop = require("../../src/shop");
 const Item = require("../../src/item");
+const RegularItem = require("../../src/item");
 
-const items = [new Item("Regular Item One", 10, 20)];
+const items = [
+  new RegularItem("Regular Item One", 100, 50),
+  new RegularItem("Regular Item One", 0, 50),
+];
 
-const days = Number(process.argv[2]) || 2;
+const days = Number(process.argv[3]) || 3;
 const gildedRose = new Shop(items);
 
 console.log("OMGHAI!");
