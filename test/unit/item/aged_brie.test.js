@@ -40,7 +40,7 @@ describe("`AgedBrie` - child class of `RegularItem`", () => {
     agedBrie.updateItemSellIn();
 
     expect(agedBrie.sellIn).toEqual(8);
-    // Quality does not go beyond 50
+    // Quality does not go over 50
     expect(agedBrie.quality).toEqual(50);
   });
 
