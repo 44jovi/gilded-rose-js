@@ -1,16 +1,6 @@
-const Item = require("./item");
+const RegularItem = require("./regular_item");
 
-class AgedBrie extends Item {
-  updateItemSellIn() {
-    // If sell by date is already zero
-    if (this.sellIn <= 0) {
-      this.sellIn = 0;
-      // Otherwise continue with decrement
-    } else {
-      this.sellIn -= 1;
-    }
-  }
-
+class AgedBrie extends RegularItem {
   updateItemQuality() {
     // Aged Brie item quality increases in value over time
     // Need inn owners to clarify the following is the desired behaviour!
