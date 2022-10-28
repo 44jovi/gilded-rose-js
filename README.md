@@ -1,6 +1,10 @@
 # Gilded Rose
 
-This is the Gilded Rose kata / tech test in JavaScript with Jest
+This is my work the famous Gilded Rose tech test / kata in JavaScript with Jest.
+
+Credit and thanks to emilybache for the base legacy code:
+
+- https://github.com/emilybache/GildedRose-Refactoring-Kata
 
 ## Getting started
 
@@ -28,6 +32,12 @@ To generate test coverage report
 
 ```sh
 npm run test:coverage
+```
+
+To run the linter (eslint)
+
+```sh
+npm run test:lint
 ```
 
 ## Design / Planning
