@@ -3,6 +3,7 @@ const RegularItem = require("../../src/items/regular_item");
 const AgedBrie = require("../../src/items/aged_brie");
 const ConjuredItem = require("../../src/items/conjured_item");
 const Sulfuras = require("../../src/items/sulfuras");
+const BackstagePass = require("../../src/items/backstage_pass");
 
 const items = [
   new RegularItem("Regular Item One", 100, 50),
@@ -13,6 +14,11 @@ const items = [
   new ConjuredItem("Conjured Mana Cake Two", 0, 50),
   new Sulfuras("Sulfuras, Hand of Ragnaros One", 0, 50),
   new Sulfuras("Sulfuras, Hand of Ragnaros Two", 100, 100),
+  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 50),
+  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 46),
+  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 44),
+  // Future: consider allowing sellIn to be -1 to signal an item has gone past sell by date
+  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 1, 50),
 ];
 
 const days = Number(process.argv[3]) || 3;
