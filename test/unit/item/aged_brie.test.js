@@ -1,6 +1,6 @@
 const AgedBrie = require("../../../src/items/aged_brie");
 
-describe("`AgedBrie` - child class of `Item`", () => {
+describe("`AgedBrie` - child class of `RegularItem`", () => {
   it("updateItemSellIn() updates sellIn value", () => {
     const agedBrie = new AgedBrie("Aged Brie", 10, 50);
 
