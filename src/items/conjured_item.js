@@ -1,4 +1,5 @@
 const RegularItem = require("./regular_item");
+
 class ConjuredItem extends RegularItem {
   updateItemQuality() {
     // Conjured items value decreases twice as fast as regular items

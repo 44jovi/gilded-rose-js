@@ -1,6 +1,5 @@
 const Item = require("./item");
 
-// Child class - "Regular Item" - default rules for how its `sellIn` and `quality` updates
 class RegularItem extends Item {
   updateItemSellIn() {
     // If sell by date is already zero
