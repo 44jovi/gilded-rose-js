@@ -3,9 +3,11 @@
 This is my work on the famous "Gilded Rose" tech test / kata.
 
 - Language
+
   - JavaScript (Node.js) with Jest for testing
 
 - Objectives
+
   - Use a TDD / OOP approach
   - Make it easy to add new shop items
   - Focus on high code quality
@@ -19,6 +21,10 @@ This is my work on the famous "Gilded Rose" tech test / kata.
 ## Design / Planning
 
 ![Screenshot](/design/design_1.png)
+
+## Testing
+
+![Screenshot](/test/test_coverage/test_coverage_0.png)
 
 ## Getting started
 
