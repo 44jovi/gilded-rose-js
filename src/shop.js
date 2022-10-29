@@ -1,5 +1,5 @@
 class Shop {
-  constructor(items = []) {
+  constructor(items) {
     this.items = items;
   }
 
