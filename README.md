@@ -1,14 +1,32 @@
 # Gilded Rose
 
-This is my work on the famous "Gilded Rose" tech test / kata in JavaScript with testing in Jest.
+This is my work on the famous "Gilded Rose" tech test / kata.
 
-Credit and thanks to emilybache for the base legacy code:
+- Language
 
-- https://github.com/emilybache/GildedRose-Refactoring-Kata
+  - JavaScript (Node.js) with Jest for testing
+
+<br>
+
+- Objectives
+
+  - Use a TDD / OOP approach
+  - Make it easy to add new shop items
+  - Focus on high code quality
+    - Readability
+    - Reliability
+    - Extensibility
+
+<br>
+
+- Credit and thanks to emilybache for the base legacy code:
+  - https://github.com/emilybache/GildedRose-Refactoring-kata
+
+<br>
 
 ## Design / Planning
 
-![Screenshot](/design/design-diagram-0.png)
+![Screenshot](/design/design_1.png)
 
 ## Getting started
 
