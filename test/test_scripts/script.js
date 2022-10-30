@@ -17,8 +17,7 @@ const items = [
   new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 20, 50),
   new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 10, 46),
   new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 5, 44),
-  // Future: consider allowing sellIn to be -1 to signal an item has gone past sell by date
-  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 1, 50),
+  new BackstagePass("Backstage passes to a TAFKAL80ETC concert", 2, 50),
 ];
 
 const days = Number(process.argv[3]) || 3;
