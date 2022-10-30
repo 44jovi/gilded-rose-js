@@ -17,7 +17,7 @@ This is my work on the famous "Gilded Rose" tech test / kata.
 
 - Orginal Specifications
 
-  - Original challenge specifications in the root directory:
+  - Original challenge specifications are in the root directory:
     ```sh
     /GildedRoseRequirements.txt
     ```
@@ -49,11 +49,13 @@ npm install
 
 ## Demo
 
-To run the demo script (adapted from original)
+To run the demo script
 
 ```sh
 node test/test_scripts/script.js
 ```
+
+It is adapted from the original `texttest_fixture.js` with added items to demonstrate the updated code working.
 
 ## Running tests
 
