@@ -15,6 +15,13 @@ This is my work on the famous "Gilded Rose" tech test / kata.
     - Reliability
     - Extensibility
 
+- Orginal Specifications
+
+  - Original challenge specifications in the root directory:
+    ```sh
+    /GildedRoseRequirements.txt
+    ```
+
 - Credit and thanks to emilybache for the base legacy code:
   - https://github.com/emilybache/GildedRose-Refactoring-kata
 
