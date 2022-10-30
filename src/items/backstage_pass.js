@@ -1,6 +1,15 @@
 const RegularItem = require("./regular_item");
 
 class BackstagePass extends RegularItem {
+  updateItemSellIn() {
+    super.updateItemSellIn();
+
+    // Ensure inventory is updated with the quality as zero
+    if (this.sellIn === 0) {
+      this.quality = 0;
+    }
+  }
+
   updateItemQuality() {
     // Backstage passes item quality changes differently to regular items
 

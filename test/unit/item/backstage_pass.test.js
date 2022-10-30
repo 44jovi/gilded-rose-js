@@ -90,7 +90,7 @@ describe("`BackstagePass` - child class of `RegularItem`", () => {
     backstagePass.updateItemSellIn();
 
     expect(backstagePass.sellIn).toEqual(0);
-    expect(backstagePass.quality).toEqual(50);
+    expect(backstagePass.quality).toEqual(0);
 
     // Update 2
     backstagePass.updateItemQuality();
