@@ -29,6 +29,10 @@ This is my work on the famous "Gilded Rose" tech test / kata.
 
 ![Screenshot](/design/design_1.png)
 
+### Items rules planning
+
+  - Individual item properties daily change rules: [click here](https://github.com/44jovi/gilded-rose-js/blob/main/design/items_planning.md)
+
 ## Testing
 
 ![Screenshot](/test/test_coverage/test_coverage_0.png)
