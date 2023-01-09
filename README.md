@@ -1,10 +1,18 @@
-# Gilded Rose
+# Gilded Rose - Refactoring Kata / Challenge
 
-This is my work on the famous "Gilded Rose" tech test / kata.
+<div>
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
+  <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white"/>
+</div>
 
-- Language
+<br>
 
-  - JavaScript (Node.js) with Jest for testing
+My work on the famous "Gilded Rose" tech test / refactoring kata.
+
+- Language / Tools
+
+  - JavaScript
+  - Jest
 
 - Objectives
 
@@ -22,7 +30,7 @@ This is my work on the famous "Gilded Rose" tech test / kata.
     /GildedRoseRequirements.txt
     ```
 
-- Credit and thanks to emilybache for the base legacy code:
+- Credit and thanks to [emilybache](https://github.com/emilybache) for the base legacy code available in virtually all programming languages:
   - https://github.com/emilybache/GildedRose-Refactoring-kata
 
 ## Design / Planning
