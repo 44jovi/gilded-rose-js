@@ -11,8 +11,4 @@ class Item {
   }
 }
 
-// WIP: child classes:
-// - BackstagePasses
-// - Sulfuras
-
 module.exports = Item;
