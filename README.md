@@ -25,10 +25,11 @@ My work on the famous "Gilded Rose" tech test / refactoring kata.
 
 - Orginal Specifications
 
-  - Original challenge specifications are in the root directory:
+  - [Link](https://github.com/44jovi/gilded-rose-js/blob/main/GildedRoseRequirements.txt)
+  - Also available in the root directory:
     ```sh
     /GildedRoseRequirements.txt
-    ```
+    ```  
 
 - Credit and thanks to [emilybache](https://github.com/emilybache) for the base legacy code available in virtually all programming languages:
   - https://github.com/emilybache/GildedRose-Refactoring-kata
