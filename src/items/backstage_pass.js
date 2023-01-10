@@ -23,10 +23,10 @@ class BackstagePass extends RegularItem {
     // Normal decrement while more than 10 days left to sell
     if (this.sellIn > 10) {
       this.quality -= 1;
-      // If 10 or less days left to sell
+      // Special increment if 10 or less days left to sell
     } else if (this.sellIn > 5) {
       this.quality += 2;
-      // If 5 or less days left to sell
+      // Special increment if 5 or less days left to sell
     } else if (this.sellIn > 0) {
       this.quality += 3;
     }
